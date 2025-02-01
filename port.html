@@ -15,8 +15,9 @@
         .header {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 20px;
-            text-align: left;
+            text-align: center;
             padding: 20px;
         }
         .header h1 {
@@ -36,7 +37,18 @@
             height: 150px;
         }
 
- 
+        .divider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .divider::before {
+            content: "...";
+            font-size: 50px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -49,7 +61,7 @@
             </div>
         </div>
         
-        <hr class="divider">
+        <div class="divider"></div>
         
         <div class="section summary">
             <h2>Summary</h2>
@@ -63,18 +75,16 @@
             </ul>
         </div>
         
-        <hr class="divider">
+        <div class="divider"></div>
         
         <div class="section publications">
             <h2>Projects</h2>
             <ul>
-            <li><p><a href="https://github.com/rajeevkumar75/Fraud-Transaction-Detection-using-SQL-Project">Fraud-Transaction-Detection-using-SQL-Project            </a></p></li>
-            <li><p><a href="https://github.com/rajeevkumar75/Flipkart-Ecommerce-Sales-Data-analysis-project">Flipkart-Ecommerce-Sales-Data-analysis-project            </a></p></li>
-            <li><p><a href="https://github.com/rajeevkumar75/Amazon_Sales_Analysis__project">Amazon_Sales_Analysis__project
-            </a></p></li>
-            <li><p><a href="https://github.com/rajeevkumar75/Employee-Attrition-Cost-Estimation-Project">Employee-Attrition-Cost-Estimation-Project
-            </a></p></li>
-        </ul>
+                <li><p><a href="https://github.com/rajeevkumar75/Fraud-Transaction-Detection-using-SQL-Project">Fraud-Transaction-Detection-using-SQL-Project</a></p></li>
+                <li><p><a href="https://github.com/rajeevkumar75/Flipkart-Ecommerce-Sales-Data-analysis-project">Flipkart-Ecommerce-Sales-Data-analysis-project</a></p></li>
+                <li><p><a href="https://github.com/rajeevkumar75/Amazon_Sales_Analysis__project">Amazon_Sales_Analysis__project</a></p></li>
+                <li><p><a href="https://github.com/rajeevkumar75/Employee-Attrition-Cost-Estimation-Project">Employee-Attrition-Cost-Estimation-Project</a></p></li>
+            </ul>
         </div>
     </div>
 </body>
