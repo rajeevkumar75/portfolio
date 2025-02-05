@@ -4,116 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Rajeev Kumar</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #E3F2FD;
-            font-family: 'Poppins', sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #F8FAFC;
             color: #333;
         }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            max-width: 1200px;
+        }
+
         .header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
             text-align: center;
-            padding: 20px;
+            background: linear-gradient(135deg, #6B46C1, #B83280);
+            color: white;
+            padding: 50px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            margin: 30px 0;
         }
-        .header h1 {
-            font-size: 36px;
-            color: #D32F2F;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-        }
-        .header p {
-            font-size: 20px;
-            color: #444;
-            margin: 5px 0 0;
-        }
+
         .header img {
             border-radius: 50%;
-            width: 200px;
-            height: 240px;
+            width: 150px;
+            height: 150px;
+            border: 5px solid white;
         }
 
-        .divider {
+        .navbar {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            margin: 20px 0;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
-        .divider::before {
-            content: "...";
-            font-size: 50px;
-            color: #333;
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
         }
 
         .section {
-            margin: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin: 30px 0;
         }
 
-        .section h2 {
-            font-size: 28px;
-            color: #D32F2F;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
-        .section ul {
-            list-style-type: none;
-            padding: 0;
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.4s ease-in-out;
         }
 
-        .section ul li {
-            margin: 10px 0;
+        .card:hover {
+            transform: translateY(-5px);
         }
 
-        .section ul li a {
-            color: #1976D2;
+        .footer {
+            text-align: center;
+            background: #2D3748;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        a{
             text-decoration: none;
-        }
-
-        .section ul li a:hover {
-            text-decoration: underline;
+            color:blue;
         }
     </style>
 </head>
 <body>
-    <div>
+    <div class="container">
         <div class="header">
-            <img src="rajeev photo.png" alt="Rajeev Kumar">
-            <div>
-                <h1>राजीव कुमार</h1>
-                <p>Data Scientist | Machine Learning Enthusiast</p>
+            <img src="/rajeev photo.png" alt="Rajeev Kumar">
+            <h1>Rajeev Kumar</h1>
+            <p>Data Scientist | Machine Learning Enthusiast</p>
+        </div>
+
+        <div class="navbar">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div id="about" class="section">
+            <h2>About Me</h2>
+            <p>I am Rajeev Kumar, a Computer Science and Data Analytics undergraduate at IIT Patna. I specialize in Machine Learning, NLP, and Data Visualization.</p>
+        </div>
+
+        <div id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="grid">
+                <div class="card">Python</div>
+                <div class="card">SQL</div>
+                <div class="card">Machine Learning</div>
+                <div class="card">Data Visualization</div>
+                <div class="card">Power BI</div>
             </div>
         </div>
-        
-        <div class="divider"></div>
-        
-        <div class="section summary">
-            <h2>Summary</h2>
-            <ul>
-                <li>Education: Pursuing BS in Computer Science and Data Analytics from IIT Patna</li>
-                <li>Proficient in Python (data cleaning, manipulation, visualization, presentation, and modeling)</li>
-                <li>Strong foundation in statistics and probability</li>
-                <li>Expertise in data science, machine learning, and data structures & algorithms</li>
-                <li>Interests: Data-driven problem-solving, impactful projects, and internships</li>
-                <li>Goal: Continuous learning to create actionable insights from data</li>
-                <li>Additional Skills: SQL, R, Java, Scala, Big Data (Hadoop, Spark), Cloud Platforms (AWS, Azure, Google Cloud), Power BI, Excel, Tableau</li>
-                <li>Soft Skills: Problem-solving, leadership, communication, critical thinking, collaboration, and presentation</li>
-            </ul>
+
+        <div id="education" class="section">
+            <h2>Education</h2>
+            <p><strong>IIT Patna</strong> - BS in Data Science</p>
         </div>
-        
-        <div class="divider"></div>
-        
-        <div class="section publications">
+
+        <div id="projects" class="section">
             <h2>Projects</h2>
-            <ul>
-                <li><p><a href="https://github.com/rajeevkumar75/Fraud-Transaction-Detection-using-SQL-Project">Fraud-Transaction-Detection-using-SQL-Project</a></p></li>
-                <li><p><a href="https://github.com/rajeevkumar75/Flipkart-Ecommerce-Sales-Data-analysis-project">Flipkart-Ecommerce-Sales-Data-analysis-project</a></p></li>
-                <li><p><a href="https://github.com/rajeevkumar75/Amazon_Sales_Analysis__project">Amazon_Sales_Analysis__project</a></p></li>
-                <li><p><a href="https://github.com/rajeevkumar75/Employee-Attrition-Cost-Estimation-Project">Employee-Attrition-Cost-Estimation-Project</a></p></li>
-            </ul>
+            <div class="grid">
+                <div class="card">Fraud Detection Using SQL</div>
+                <div class="card">Amazon Sales Analysis</div>
+                <div class="card">Flipkart Sales Analysis</div>
+            </div>
+        </div>
+
+        <div id="resume" class="section">
+            
+            <h2>Resume</h2>
+            <div class="card">
+            <p><a href="#">Download My Resume</a></p>
+        </div>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="grid">
+                <div class="card"><a href="mailto:krrajeev0000000000@gmail.com">Email</a></div>
+                <div class="card"><a href="https://www.linkedin.com/in/rajeev-kumar-685326277">LinkedIn</a></div>
+                <div class="card"><a href="https://github.com/rajeevkumar75">GitHub</a></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Made with ❤️ by Rajeev Kumar</p>
         </div>
     </div>
 </body>
