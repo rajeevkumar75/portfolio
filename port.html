@@ -3,188 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Rajeev Kumar</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+        .header div {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            border-bottom: 4px solid #2980b9;
         }
-
-        body {
-            background: #F8FAFC;
+        #p1{
+            font-size: 20px;
+            padding:20px;
             color: #333;
+            text-align: justify;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px gray;
         }
-
-        .container {
-            width: 90%;
-            margin: auto;
-            max-width: 1200px;
+        table {
+            border: 1px solid grey;
+            width:100%;
+            margin:20px;
         }
-
-        .header {
+        table, th, td {
+            border: 1px solid #ddd;
             text-align: center;
-            background: linear-gradient(135deg, #6B46C1, #B83280);
+            margin:0px;
+        }
+        th, td {
+            padding: 12px;
+            font-size:large;
+        }
+        th {
+            background-color: #2c3e50;
             color: white;
-            padding: 50px 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            margin: 30px 0;
         }
-
-        .header img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            border: 5px solid white;
-        }
-
-        .navbar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px;
-            border-radius: 10px;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            font-weight: 500;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .navbar a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-        }
-
-        .section {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            margin: 30px 0;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.4s ease-in-out;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .footer {
-            text-align: center;
-            background: #2D3748;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        a{
-            text-decoration: none;
-            color:blue;
+        tr:hover {
+            background-color: #2c3e50;
+            color:white;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <img src="rajeev photo.png" alt="Rajeev Kumar">
-            <h1>Rajeev Kumar</h1>
-            <p>Data Scientist | Machine Learning Enthusiast</p>
-        </div>
-
-        <div class="navbar">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#resume">Resume</a>
-            <a href="#contact">Contact</a>
-        </div>
-
-        <div id="about" class="section">
-            <h2>About Me</h2>
-            <p>I am Rajeev Kumar, a Computer Science and Data Analytics undergraduate at IIT Patna. I specialize in Machine Learning, NLP, and Data Visualization.</p>
-        </div>
-
-        <div id="skills" class="section">
-            <h2>Skills</h2>
-            <div class="grid">
-                <div class="card">Python</div>
-                <div class="card">SQL</div>
-                <div class="card">Machine Learning</div>
-                <div class="card">Data Visualization</div>
-                <div class="card">Power BI</div>
-            </div>
-        </div>
-
-        <div id="education" class="section">
-            <h2>Education</h2>
-            <p><strong>IIT Patna</strong> - BS in Data Science</p>
-        </div>
-
-        <div id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="grid">
-                <div class="card">Fraud Detection Using SQL</div>
-                <div class="card">Amazon Sales Analysis</div>
-                <div class="card">Flipkart Sales Analysis</div>
-            </div>
-        </div>
-
-        <div id="resume" class="section">
-            
-            <h2>Resume</h2>
-            <div class="card">
-            <p><a href="#">Download My Resume</a></p>
-        </div>
-        </div>
-
-        <div id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="grid">
-                <div class="card"><a href="mailto:krrajeev0000000000@gmail.com">Email</a></div>
-                <div class="card"><a href="https://www.linkedin.com/in/rajeev-kumar-685326277">LinkedIn</a></div>
-                <div class="card"><a href="https://github.com/rajeevkumar75">GitHub</a></div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>Made with ❤️ by Rajeev Kumar</p>
-        </div>
+<body style="margin:0px; padding:0px;">
+    <header>
+        <div style="background-color: #3498db; "><h1 style="text-align:center;">Discover Paris</h1></div>
+    </header>
+    <div><p id="p1">Paris, the capital of France, is a dream destination known for its rich history, stunning architecture, and romantic ambiance. The city is home to iconic landmarks like the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral, attracting millions of tourists every year.</p>
     </div>
+    
+    <table>
+        <tr>
+            <th>Attraction</th>
+            <th>Best Time to visit</th>
+            <th>Famous For</th>
+        </tr>
+        <tr>
+            <td>Effile Tower</td>
+            <td>spring & Fall</td>
+            <td>Panoramic View</td>
+        </tr>
+        <tr>
+            <td>Louvre Museum</td>
+            <td>Year-round</td>
+            <td>Art and Mona Lisa</td>
+        </tr>
+        <tr>
+            <td>Notre-Dame cathedral</td>
+            <td> Spring and summer</td>
+            <td> Gothic Architecture</td>
+        </tr>
+        <tr>
+            <td>Seine River Cruise</td>
+            <td>Evening</td>
+            <td>Romatic Views</td>
+        </tr>
+    </table>
 </body>
 </html>
